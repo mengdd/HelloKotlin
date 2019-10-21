@@ -10,6 +10,9 @@ fun main() {
 
     println("using sequence -----------------------------")
     findBookNamesOfAuthorsUsingSequence(authors)
+
+    println("-------try intermediate operation-------")
+    tryIntermediate()
 }
 
 fun findBookNamesOfAuthorsUsingCollection(authors: Set<String>): List<String> {
@@ -38,4 +41,11 @@ fun findBookNamesOfAuthorsUsingSequence(authors: Set<String>): List<String> {
         }
         .take(3)
         .toList()
+}
+
+
+fun tryIntermediate() {
+    sequenceOf("Hello", "Kotlin", "World")
+        .onEach { println(it) } // intermediate
+//        .toList() // terminal
 }
