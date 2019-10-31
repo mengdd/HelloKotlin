@@ -4,8 +4,11 @@ fun main() {
 
     tryThisAndIt()
 
+    println("----------1-----------")
     useLet()
-
+    println("----------2-----------")
+    useLet2()
+    println("----------3-----------")
     useTakeIf()
 }
 
@@ -47,11 +50,22 @@ val person4 = Person("John").apply {
     }
 }
 
+val person5 = Person("Emily")
+
 fun useLet() {
     printPetName(person1)
     printPetName(person2)
     printPetName(person3)
     printPetName(person4)
+    printPetName(person5)
+}
+
+fun useLet2() {
+    printPetNameOrPrintWhy(person1)
+    printPetNameOrPrintWhy(person2)
+    printPetNameOrPrintWhy(person3)
+    printPetNameOrPrintWhy(person4)
+    printPetNameOrPrintWhy(person5)
 }
 
 fun useTakeIf() {
@@ -64,6 +78,10 @@ fun useTakeIf() {
 
 fun printPetName(person: Person?) {
     person?.pet?.name?.let { println("pet name is: $it") }
+}
+
+fun printPetNameOrPrintWhy(person: Person?) {
+    person?.pet?.name?.let { println("pet name is: $it") } ?: println("there is no pet name")
 }
 
 fun printDogName(person: Person?) {
