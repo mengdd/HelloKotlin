@@ -12,3 +12,7 @@ private fun getStringFromJava() {
     println(stringTwo)
     println(stringTwo?.length)
 }
+
+private fun trySAM() {
+    JavaUtils.calculate(2, 3) { number1, number2 -> number1 + number2 }
+}

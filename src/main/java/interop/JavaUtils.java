@@ -14,4 +14,12 @@ public class JavaUtils {
     public static String getStringTwo() {
         return null;
     }
+
+    interface Operation {
+        int doCalculate(int left, int right);
+    }
+
+    public static int calculate(int firstNumber, int secondNumber, Operation operation) {
+        return operation.doCalculate(firstNumber, secondNumber);
+    }
 }
