@@ -15,7 +15,7 @@ public class JavaUtils {
         return null;
     }
 
-    interface Operation {
+    public interface Operation {
         int doCalculate(int left, int right);
     }
 
