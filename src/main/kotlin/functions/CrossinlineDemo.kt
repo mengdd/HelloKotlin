@@ -41,3 +41,8 @@ inline fun fooWithCrossinline(crossinline body: () -> Unit) {
     body()
     println("with crossinline done")
 }
+
+inline fun fooWithCrossinline2(crossinline body: () -> Unit) {
+    val f = Runnable { body() }
+    println("fooWithCrossinline 2")
+}
